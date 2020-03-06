@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>Recomendaciones</title>
+     <meta charset="utf-8">
+     <meta name="description" content="Página de recomendaciones por servicios">
+     <meta name="keywords" content ="HTML, CSS, JavaScript">
+     <link rel="stylesheet" href="estilos.css">
+     
+  </head>
+  <body>
+     <header id="cabeceralogo">
+       <div>
+         <h1>¡Algunas Ideas!</h1>
+       </div> 
+     </header>
+     <nav id="menuprincipal">
+       <div>
+         </br><a><center>Sugerencias musicales y cinematográficas</center></a></br>
+     </nav>
+     <main>
+       <div>
+          <section id="articulosprincipales">
+            <article>
+              <h1>¡Cuentanos algo sobre ti!</h1>
+        <p>Somos una página que solo se dedica a entretener a nuestros visitantes, aquí te podremos recomendarte una canción o una pelicula con solamente responder unas preguntas.</p>
+              </br>
+        <form action ="javascript:recomiendaHttp();" id="form">
+              </br>
+        <select id="sexo" class="input">
+        <option value="">Sexo</option>
+        <option value="uno">Masculino</option>
+        <option value="dos">Femenino</option>
+        </select>
+        </br>
+          </br>
+        <select id="tipo" class="input">
+        <option value="">Música o Pelicula</option>
+        <option value="uno">Música</option>
+        <option value="dos">Pelicula</option>
+        </select>
+        </br>
+          </br>
+        <select id="color" class="input">
+        <option value="">Elija un color</option>
+        <option value="uno">Negro</option>
+        <option value="dos">Rojo</option>
+        <option value="tres">Rosa</option>
+        <option value="cuatro">Dorado</option>
+        </select>
+        </br>
+        <button type="submit" class="input">Confirmar</button>
+        </form>
+        <script>
+          async function recomiendaHttp() {
+          var tip = document.getElementById("tipo");
+          var indiceSeleccionado = tip.selectedIndex;
+          var opcionSeleccionada = tip.options[indiceSeleccionado];
+          var tipo = opcionSeleccionada.value;
+              
+          var col = document.getElementById("color");
+          var indiceSeleccionado = col.selectedIndex;
+          var opcionSeleccionada = col.options[indiceSeleccionado];
+          var color = opcionSeleccionada.value;
+              
+          var sex = document.getElementById("sexo");
+          var indiceSeleccionado = sex.selectedIndex;
+          var opcionSeleccionada = sex.options[indiceSeleccionado];
+          var sexo = opcionSeleccionada.value;
+          
+            try {
+              const respuestaHttp =
+                await fetch({sexo}
+                +{tipo}
+                +{color});
+              if (respuestaHttp.ok) {
+                const texto = await respuestaHttp.text();
+                alert(texto);
+              } else {
+                throw new Error(respuestaHttp.statusText)
+              }
+            } catch (e) {
+              alert(e.message)
+            }
+          }
+        </script>
+            </article>
+      </section>
+      <aside id="infoadicional">
+         <h2>Canserbero</h2></br>
+         <a>¿Lo conoces?, Entonces no hay nada mejor que pueda recomendarte, ya eres un conocedor de buena música.</a></br>
+         </br><img src="https://www.elsiglodetorreon.com.mx/m/i/2020/01/1270739.jpeg" height="170">
+         <h1></br></br><center>Redes Sociales</center></h1>
+         <center><p><a href="https://www.facebook.com/Edgar0397"><img src="https://image.flaticon.com/icons/png/512/25/25305.png" height="50" ></a></p></center>
+         <center><p><br><a href="https://twitter.com/EdgarOr13757518"><img src="http://pngimg.com/uploads/twitter/twitter_PNG8.png" height="50"></a></p></center>
+         <center><p><br><a href="https://www.instagram.com/ortedgar22/?hl=es-la"><img src="https://cdn.icon-icons.com/icons2/2037/PNG/512/ig_instagram_media_social_icon_124260.png" height="50"></a></p></center>
+      </aside>
+      </div>
+    </main>
+    <footer id="pielogo">
+      <div>
+      <section class="seccionpie">
+        <address>Nezahualcóyotl, Estado de México</address>
+        <small>&copy; Derechos Reservados, 2020 Julio Edgar Ortega Astudillo</small>
+      </section>
+      </div>
+    </footer>
+  </body>
+  </html>
