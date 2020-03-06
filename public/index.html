@@ -70,9 +70,9 @@
           
             try {
               const respuestaHttp =
-                await fetch({sexo}
-                +{tipo}
-                +{color});
+                await fetch("recomienda?sexo"
+                +"&tipo"
+                +"&color");
               if (respuestaHttp.ok) {
                 const texto = await respuestaHttp.text();
                 alert(texto);
