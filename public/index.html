@@ -42,7 +42,7 @@
         </br>
           </br>
         <select id="color" class="input">
-        <option value="">Elija un color</option>
+        <option value="">Elija un color </option>
         <option value="uno">Negro</option>
         <option value="dos">Rojo</option>
         <option value="tres">Rosa</option>
@@ -53,21 +53,6 @@
         </form>
         <script>
           async function recomiendaHttp() {
-          var tip = document.getElementById("tipo");
-          var indiceSeleccionado = tip.selectedIndex;
-          var opcionSeleccionada = tip.options[indiceSeleccionado];
-          var tipo = opcionSeleccionada.value;
-              
-          var col = document.getElementById("color");
-          var indiceSeleccionado = col.selectedIndex;
-          var opcionSeleccionada = col.options[indiceSeleccionado];
-          var color = opcionSeleccionada.value;
-              
-          var sex = document.getElementById("sexo");
-          var indiceSeleccionado = sex.selectedIndex;
-          var opcionSeleccionada = sex.options[indiceSeleccionado];
-          var sexo = opcionSeleccionada.value;
-          
             try {
               const respuestaHttp =
                 await fetch("recomienda?sexo"
