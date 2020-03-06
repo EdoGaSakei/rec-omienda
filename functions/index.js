@@ -6,66 +6,66 @@ exports.recomienda = functions.https.onRequest(
       try {
         if(request.query.sexo === "uno"){
             if (request.query.tipo === "uno" && request.query.color === "uno") {
-                throw new Error("Fear of the dark:Iron maiden");
+               response.send("Fear of the dark:Iron maiden");
              }
              else if(request.query.tipo === "uno" && request.query.color === "dos") {
-                throw new Error("Con calma:Daddy Yankee");
+               response.send("Con calma:Daddy Yankee");
              }
              else if(request.query.tipo === "uno" && request.query.color === "tres") {
-                throw new Error("Girl next door:Drake Bell");
+               response.send("Girl next door:Drake Bell");
              }
              else if(request.query.tipo === "uno" && request.query.color === "cuatro") {
-                throw new Error("Lazy song:Bruno Mars");
+               response.send("Lazy song:Bruno Mars");
              }
              else if(request.query.tipo === "dos" && request.query.color === "uno") {
-                throw new Error("Get rich or die tryin");
+               response.send("Get rich or die tryin");
              }
              else if(request.query.tipo === "dos" && request.query.color === "dos") {
-                throw new Error("Crazy, Stupid Love");
+               response.send("Crazy, Stupid Love");
              }
              else if(request.query.tipo === "dos" && request.query.color === "tres") {
-                throw new Error("500 days of summer");
+               response.send("500 days of summer");
              }
              else if(request.query.tipo === "dos" && request.query.color === "cuatro") {
-                throw new Error("Shottas 'hermanos en el crimen'");
+               response.send("Shottas 'hermanos en el crimen'");
              }
              else {
-                throw new Error("Opcion no existente");
+               response.send("Opcion no existente");
              }
              }
              else if(request.query.sexo === "dos"){
                 
                if (request.query.tipo === "uno" && request.query.color === "uno") {
-                  throw new Error("Complicated:Abril Lavigne");
+                  response.send("Complicated:Abril Lavigne");
                }
                else if(request.query.tipo === "uno" && request.query.color === "dos") {
-                  throw new Error("Corre:Jesse y Joy");
+                  response.send("Corre:Jesse y Joy");
                }
                else if(request.query.tipo === "uno" && request.query.color === "tres") {
-                  throw new Error("Mundo de caramelo:Danna Paola");
+                  response.send("Mundo de caramelo:Danna Paola");
                }
                else if(request.query.tipo === "uno" && request.query.color === "cuatro") {
-                  throw new Error("Single ladies:Beyoncé");
+                  response.send("Single ladies:Beyoncé");
                }
                else if(request.query.tipo === "dos" && request.query.color === "uno") {
-                  throw new Error("Chicas Pesadas");
+                  response.send("Chicas Pesadas");
                }
                else if(request.query.tipo === "dos" && request.query.color === "dos") {
-                  throw new Error("Triunfos Robados");
+                  response.send("Triunfos Robados");
                }
                else if(request.query.tipo === "dos" && request.query.color === "tres") {
                   throw new Error("Bajo la misma estrella");
                }
                else if(request.query.tipo === "dos" && request.query.color === "cuatro") {
-                  throw new Error("Rapunzel");
+                  response.send("Rapunzel");
                }
                else {
-                  throw new Error("Opcion no existente");
+                  response.send("Opcion no existente");
                }
                
                }
                else{
-                  throw new Error("Debes seleccionar tu sexo");
+                  response.send("Debes seleccionar tu sexo");
                }
              }
            
