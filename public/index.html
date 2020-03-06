@@ -22,7 +22,7 @@
        <div>
           <section id="articulosprincipales">
             <article>
-              <h1>¡Cuentanos algo sobre ti!</h1>
+              <h1>¡Cuentanos algo sobre ti! </h1>
         <p>Somos una página que solo se dedica a entretener a nuestros visitantes, aquí te podremos recomendarte una canción o una pelicula con solamente responder unas preguntas.</p>
               </br>
         <form action ="javascript:recomiendaHttp();" id="form">
@@ -71,8 +71,11 @@
             try {
               const respuestaHttp =
                 await fetch("recomienda?sexo"
+                + encodeURIComponent(sexo.value.trim())
                 +"&tipo"
-                +"&color");
+                + encodeURIComponent(tipo.value.trim())
+                +"&color"
+                + encodeURIComponent(color.value.trim()));
               if (respuestaHttp.ok) {
                 const texto = await respuestaHttp.text();
                 alert(texto);
