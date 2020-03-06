@@ -42,7 +42,7 @@
         </br>
           </br>
         <select id="color" class="input">
-        <option value="">Elija un color </option>
+        <option value="">Elija un color</option>
         <option value="uno">Negro</option>
         <option value="dos">Rojo</option>
         <option value="tres">Rosa</option>
@@ -55,11 +55,11 @@
           async function recomiendaHttp() {
             try {
               const respuestaHttp =
-                await fetch("recomienda?sexo"
+                await fetch("recomienda?sexo="
                 + encodeURIComponent(sexo.value.trim())
-                +"&tipo"
+                +"&tipo="
                 + encodeURIComponent(tipo.value.trim())
-                +"&color"
+                +"&color="
                 + encodeURIComponent(color.value.trim()));
               if (respuestaHttp.ok) {
                 const texto = await respuestaHttp.text();

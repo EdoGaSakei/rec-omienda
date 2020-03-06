@@ -54,7 +54,7 @@ exports.recomienda = functions.https.onRequest(
                   response.send("Triunfos Robados");
                }
                else if(request.query.tipo === "dos" && request.query.color === "tres") {
-                  throw new Error("Bajo la misma estrella");
+                  response.send("Bajo la misma estrella");
                }
                else if(request.query.tipo === "dos"  && request.query.color === "cuatro") {
                   response.send("Rapunzel");
