@@ -56,7 +56,7 @@ exports.recomienda = functions.https.onRequest(
                else if(request.query.tipo === "dos" && request.query.color === "tres") {
                   throw new Error("Bajo la misma estrella");
                }
-               else if(request.query.tipo === "dos" && request.query.color === "cuatro") {
+               else if(request.query.tipo === "dos"  && request.query.color === "cuatro") {
                   response.send("Rapunzel");
                }
                else {
