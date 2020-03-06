@@ -73,19 +73,3 @@ exports.recomienda = functions.https.onRequest(
         response.send(e.message);
       }
     });
-
-    exports.saludo = functions.https.onRequest(
-  
-      (request, response) => {
-        try {
-          if (!request.query.nombre1) {
-            throw new Error("Falta el nombre 1");
-          } else if (!request.query.nombre2) {
-            throw new Error("Falta el nombre 2");
-          }
-          response.send(
-            `Saludos a ${request.query.nombre1} y a ${request.query.nombre2}`);
-        } catch (e) {
-          response.send(e.message);
-        }
-      });
